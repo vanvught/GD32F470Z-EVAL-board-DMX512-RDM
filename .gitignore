@@ -32,3 +32,10 @@
 *.app
 
 udp_send
+*.su
+*.list
+*.map
+*.elf
+*.bin
+
+software_version_id.h
