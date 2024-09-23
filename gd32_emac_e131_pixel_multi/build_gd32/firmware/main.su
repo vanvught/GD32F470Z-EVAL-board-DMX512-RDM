@@ -1,0 +1,24 @@
+../lib-display/include/i2c/display.h:206:7:void Display::SetCursorPos(uint32_t, uint32_t)	0	static
+../lib-display/include/i2c/display.h:103:7:void Display::PutChar(int)	0	static
+../lib-network/include/net/dhcp.h:104:13:void net::dhcp_run()	32	static
+../lib-display/include/i2c/display.h:138:6:)	56	static
+../lib-display/include/i2c/display.h:166:7:void Display::TextStatus(const char*)	32	static
+../lib-display/include/i2c/display.h:188:7:void Display::TextStatus(const char*, uint32_t)	16	static
+../lib-display/include/i2c/display.h:286:7:void Display::SetSleep(bool)	16	static
+../lib-e131/include/e131bridge.h:300:7:void E131Bridge::Run()	16	static
+../lib-display/include/displayhandler.h:37:6:void hardware::ledblink::display(uint32_t)	16	static
+../lib-ws28xx/include/pixeltype.h:100:14:float pixel::pixel_convert_TxH(uint8_t)	0	static
+../lib-ws28xx/include/pixelconfiguration.h:245:7:void PixelConfiguration::Print()	24	static
+../lib-ws28xx/include/pixelconfiguration.h:268:29:static PixelConfiguration& PixelConfiguration::Get()	8	static
+../lib-ws28xxdmx/include/pixeldmxconfiguration.h:53:2:PixelDmxConfiguration::PixelDmxConfiguration()	16	static
+../lib-ws28xx/include/pixeltestpattern.h:36:2:PixelTestPattern::PixelTestPattern(pixelpatterns::Pattern, uint32_t)	56	static
+../lib-ws28xxdmx/include/ws28xxdmxmulti.h:128:7:virtual void WS28xxDmxMulti::Print()	16	static
+../lib-rdm/include/rdmsubdevices.h:71:2:RDMSubDevices::~RDMSubDevices()	24	static
+../lib-rdm/include/llrp/llrpdevice.h:52:2:LLRPDevice::LLRPDevice()	16	static
+../lib-rdm/include/rdmdeviceresponder.h:69:10:RDMDeviceResponder::~RDMDeviceResponder()	16	static
+../lib-rdm/include/rdmnetdevice.h:54:2:RDMNetDevice::~RDMNetDevice()	8	static
+../lib-rdm/include/rdmnetdevice.h:54:2:virtual RDMNetDevice::~RDMNetDevice()	8	static
+../lib-rdm/include/rdmdeviceresponder.h:69:10:virtual RDMDeviceResponder::~RDMDeviceResponder()	8	static
+../lib-rdm/include/rdmnetdevice.h:64:7:void RDMNetDevice::Print()	80	static
+firmware/main.cpp:87:6:void Hardware::RebootHandler()	8	static
+firmware/main.cpp:92:5:int main()	4272	static

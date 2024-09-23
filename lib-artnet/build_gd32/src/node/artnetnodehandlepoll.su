@@ -1,0 +1,3 @@
+src/node/artnetnodehandlepoll.cpp:51:6:void ArtNetNode::ProcessPollRelply(uint32_t, uint32_t&, uint32_t&)	32	static
+src/node/artnetnodehandlepoll.cpp:90:6:void ArtNetNode::SendPollRelply(uint32_t, uint32_t, artnet::ArtPollQueue*)	72	static
+src/node/artnetnodehandlepoll.cpp:153:6:void ArtNetNode::HandlePoll()	20	static

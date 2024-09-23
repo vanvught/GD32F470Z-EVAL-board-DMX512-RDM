@@ -1,0 +1,1 @@
+src/node/artnettrigger.cpp:37:6:void ArtNetNode::HandleTrigger()	4	static

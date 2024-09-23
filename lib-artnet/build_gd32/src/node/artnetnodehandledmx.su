@@ -1,0 +1,3 @@
+src/node/artnetnodehandledmx.cpp:45:6:void ArtNetNode::UpdateMergeStatus(uint32_t)	0	static
+src/node/artnetnodehandledmx.cpp:54:6:void ArtNetNode::CheckMergeTimeouts(uint32_t)	16	static
+src/node/artnetnodehandledmx.cpp:82:6:void ArtNetNode::HandleDmx()	72	static

@@ -1,0 +1,1 @@
+src/node/artnetnodehandlesync.cpp:41:6:void ArtNetNode::HandleSync()	24	static

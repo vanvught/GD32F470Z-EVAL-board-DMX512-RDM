@@ -1,0 +1,3 @@
+lib/rdmsoftwareversion.cpp:34:13:static const char* RDMSoftwareVersion::GetVersion()	0	static
+lib/rdmsoftwareversion.cpp:38:10:static uint32_t RDMSoftwareVersion::GetVersionLength()	0	static
+lib/rdmsoftwareversion.cpp:42:10:static uint32_t RDMSoftwareVersion::GetVersionId()	0	static

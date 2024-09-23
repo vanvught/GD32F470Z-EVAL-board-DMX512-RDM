@@ -1,0 +1,10 @@
+../include/string.h:120:14:char* strncpy(char*, const char*, size_t)	0	static
+src/node/artnetnode.cpp:147:1:ArtNetNode::~ArtNetNode()	8	static
+src/node/artnetnode.cpp:153:6:void ArtNetNode::Start()	16	static
+src/node/artnetnode.cpp:244:6:void ArtNetNode::Stop()	24	static
+src/node/artnetnode.cpp:278:6:void ArtNetNode::SetShortName(uint32_t, const char*)	32	static
+src/node/artnetnode.cpp:299:6:void ArtNetNode::GetLongNameDefault(char*)	24	static
+src/node/artnetnode.cpp:320:6:void ArtNetNode::SetLongName(const char*)	32	static
+src/node/artnetnode.cpp:70:1:ArtNetNode::ArtNetNode()	24	static
+src/node/artnetnode.cpp:375:6:void ArtNetNode::SetNetworkDataLossCondition()	16	static
+src/node/artnetnode.cpp:448:6:void ArtNetNode::Process(uint32_t)	24	static

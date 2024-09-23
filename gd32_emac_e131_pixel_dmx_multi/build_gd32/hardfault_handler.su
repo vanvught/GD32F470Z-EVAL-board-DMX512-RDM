@@ -1,0 +1,2 @@
+./../firmware-template-gd32//hardfault_handler.c:14:6:HardFault_Handler	0	static
+./../firmware-template-gd32//hardfault_handler.c:25:6:hardfault_handler	64	static

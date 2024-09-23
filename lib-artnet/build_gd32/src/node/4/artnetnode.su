@@ -1,0 +1,5 @@
+./include/artnetstore.h:126:14:static void ArtNetStore::SavePortProtocol(uint32_t, artnet::PortProtocol)	48	static
+src/node/4/artnetnode.cpp:45:6:void ArtNetNode::SetPortProtocol4(uint32_t, artnet::PortProtocol)	16	static
+src/node/4/artnetnode.cpp:69:6:void ArtNetNode::SetUniverse4(uint32_t, lightset::PortDir)	8	static
+src/node/4/artnetnode.cpp:111:6:void ArtNetNode::SetLedBlinkMode4(hardware::ledblink::Mode)	0	static
+src/node/4/artnetnode.cpp:128:9:uint8_t ArtNetNode::GetGoodOutput4(uint32_t)	0	static

@@ -1,0 +1,34 @@
+../lib-lightset/include/lightset.h:206:15:virtual bool LightSet::SetDmxStartAddress(uint16_t)	0	static
+../lib-lightset/include/lightset.h:209:19:virtual uint16_t LightSet::GetDmxStartAddress()	0	static
+../lib-lightset/include/lightset.h:212:19:virtual uint16_t LightSet::GetDmxFootprint()	0	static
+../lib-lightset/include/lightset.h:215:15:virtual bool LightSet::GetSlotInfo(uint16_t, lightset::SlotInfo&)	0	static
+../lib-dmx/include/dmxsend.h:127:11:virtual uint32_t DmxSend::GetRefreshRate()	0	static
+../lib-dmx/include/dmxsend.h:42:7:DmxSend::~DmxSend()	0	static
+../lib-dmx/include/dmxsend.h:131:7:virtual void DmxSend::Blackout(bool)	0	static
+../lib-dmx/include/dmxsend.h:135:7:virtual void DmxSend::FullOn()	0	static
+../lib-dmx/include/dmxsend.h:122:24:virtual lightset::OutputStyle DmxSend::GetOutputStyle(uint32_t) const	8	static
+../lib-dmx/include/dmxsend.h:118:7:virtual void DmxSend::SetOutputStyle(uint32_t, lightset::OutputStyle)	0	static
+../lib-dmx/include/dmxsend.h:98:7:virtual void DmxSend::Sync(uint32_t)	16	static
+../lib-dmx/include/dmxsend.h:42:7:virtual DmxSend::~DmxSend()	8	static
+../lib-dmx/include/dmxsend.h:139:7:virtual void DmxSend::Print()	8	static
+../lib-dmx/include/dmxsend.h:86:7:virtual void DmxSend::SetData(uint32_t, const uint8_t*, uint32_t, bool)	24	static
+../lib-dmx/include/dmxsend.h:66:7:virtual void DmxSend::Stop(uint32_t)	24	static
+../lib-dmx/include/dmxsend.h:44:7:virtual void DmxSend::Start(uint32_t)	24	static
+../lib-dmx/include/dmxsend.h:103:7:virtual void DmxSend::Sync()	16	static
+../lib-display/include/i2c/display.h:206:7:void Display::SetCursorPos(uint32_t, uint32_t)	0	static
+../lib-display/include/i2c/display.h:103:7:void Display::PutChar(int)	0	static
+../lib-network/include/net/dhcp.h:104:13:void net::dhcp_run()	32	static
+../lib-display/include/i2c/display.h:166:7:void Display::TextStatus(const char*)	32	static
+../lib-display/include/i2c/display.h:188:7:void Display::TextStatus(const char*, uint32_t)	16	static
+../lib-display/include/i2c/display.h:286:7:void Display::SetSleep(bool)	16	static
+../lib-e131/include/e131bridge.h:300:7:void E131Bridge::Run()	16	static
+../lib-display/include/displayhandler.h:37:6:void hardware::ledblink::display(uint32_t)	16	static
+../lib-rdm/include/rdmsubdevices.h:71:2:RDMSubDevices::~RDMSubDevices()	24	static
+../lib-rdm/include/llrp/llrpdevice.h:52:2:LLRPDevice::LLRPDevice()	16	static
+../lib-rdm/include/rdmdeviceresponder.h:69:10:RDMDeviceResponder::~RDMDeviceResponder()	16	static
+../lib-rdm/include/rdmnetdevice.h:54:2:RDMNetDevice::~RDMNetDevice()	8	static
+../lib-rdm/include/rdmnetdevice.h:54:2:virtual RDMNetDevice::~RDMNetDevice()	8	static
+../lib-rdm/include/rdmdeviceresponder.h:69:10:virtual RDMDeviceResponder::~RDMDeviceResponder()	8	static
+../lib-rdm/include/rdmnetdevice.h:64:7:void RDMNetDevice::Print()	80	static
+firmware/main.cpp:78:6:void Hardware::RebootHandler()	8	static
+firmware/main.cpp:83:5:int main()	3304	static
