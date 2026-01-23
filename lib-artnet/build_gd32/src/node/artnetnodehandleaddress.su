@@ -1,12 +1,13 @@
-../lib-lightset/include/lightsetdata.h:161:7:void lightset::Data::IOutputClear(LightSet*, uint32_t)	24	static
-./include/artnetnode.h:628:11:uint16_t ArtNetNode::MakePortAddress(uint16_t, uint32_t)	0	static
-./include/artnetstore.h:97:14:static void ArtNetStore::SaveMergeMode(uint32_t, lightset::MergeMode)	48	static
-./include/artnetstore.h:226:14:static void ArtNetStore::SaveUniverse(uint32_t)	32	static
-src/node/artnetnodehandleaddress.cpp:43:6:void ArtNetNode::SetLocalMerging()	24	static
-src/node/artnetnodehandleaddress.cpp:104:6:void ArtNetNode::SetUniverseSwitch(uint32_t, lightset::PortDir, uint8_t)	32	static
-src/node/artnetnodehandleaddress.cpp:90:6:void ArtNetNode::SetUniverse(uint32_t, lightset::PortDir, uint16_t)	8	static
-src/node/artnetnodehandleaddress.cpp:175:6:void ArtNetNode::SetSubnetSwitch(uint32_t, uint8_t)	16	static
-src/node/artnetnodehandleaddress.cpp:188:6:void ArtNetNode::SetNetSwitch(uint32_t, uint8_t)	16	static
-src/node/artnetnodehandleaddress.cpp:202:6:void ArtNetNode::SetMergeMode(uint32_t, lightset::MergeMode)	16	static
-src/node/artnetnodehandleaddress.cpp:221:6:void ArtNetNode::SetFailSafe(artnetnode::FailSafe)	40	static
-src/node/artnetnodehandleaddress.cpp:278:6:void ArtNetNode::HandleAddress()	24	static
+../lib-dmxnode/include/dmxnodedata.h:68:17:static void dmxnode::Data::Clear(uint32_t)	4	static
+../lib-dmxnode/include/dmxnodedata.h:72:21:static uint32_t dmxnode::Data::GetLength(uint32_t)	0	static
+../lib-dmxnode/include/dmxnodedata.h:74:27:static const uint8_t* dmxnode::Data::Backup(uint32_t)	0	static
+../lib-pixeldmx/include/pixeldmxmulti.h:105:10:void PixelDmxMulti::Start(uint32_t)	0	static
+../lib-pixeldmx/include/pixeldmxmulti.h:271:10:void PixelDmxMulti::SetData(uint32_t, const uint8_t*, uint32_t)	168	static
+../lib-configstore/include/configstore.h:578:10:bool ConfigStore::Flash()	24	static
+../lib-configstore/include/configstore.h:529:17:static void ConfigStore::Timer(TimerHandle_t)	8	static
+../lib-artnet/include/artnetnode4_inline_impl.h:38:13:void ArtNetNode::SetUniverse4(uint32_t)	4	static
+../lib-artnet/include/artnetnode4_inline_impl.h:81:13:void ArtNetNode::SetPortProtocol4(uint32_t, artnet::PortProtocol)	32	static
+src/node/artnetnodehandleaddress.cpp:42:6:void ArtNetNode::SetSwitch(uint32_t, uint8_t)	16	static
+../lib-pixeldmx/include/pixeldmxmulti.h:155:35:void PixelDmxMulti::SetData(uint32_t, const uint8_t*, uint32_t) [with bool doUpdate = true]	24	static
+../lib-dmxnode/include/dmxnode_data.h:42:13:void dmxnode::DataOutput(DmxNodeOutputType*, uint32_t)	16	static
+src/node/artnetnodehandleaddress.cpp:65:6:void ArtNetNode::HandleAddress()	24	static

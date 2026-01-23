@@ -39,3 +39,4 @@ udp_send
 *.bin
 
 software_version_id.h
+*.su

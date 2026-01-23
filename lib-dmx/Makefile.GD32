@@ -1,6 +1,6 @@
 DEFINES=NDEBUG  
 
-EXTRA_INCLUDES=../lib-rdm/include ../lib-properties/include
+EXTRA_INCLUDES=../lib-rdm/include
 
 ifneq ($(MAKE_FLAGS),)
 else

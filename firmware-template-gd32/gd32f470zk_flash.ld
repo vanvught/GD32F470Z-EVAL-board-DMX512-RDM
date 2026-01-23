@@ -14,7 +14,7 @@ ENTRY(Reset_Handler)
 SECTIONS
 {
   __heap_size = DEFINED(__heap_size) ? __heap_size : 8K;
-  __stack_size = DEFINED(__stack_size) ? __stack_size : 32K;
+  __stack_size = DEFINED(__stack_size) ? __stack_size : 24K;
 
   .vectors :
   {
@@ -140,6 +140,8 @@ SECTIONS
     *(.dmx)
 	. = ALIGN(4);
     _edmx = .;
+    . = ALIGN(4);
+     *(.http*)
   } >RAM1 
   
   .sram2 :

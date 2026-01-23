@@ -1,3 +1,5 @@
-src/node/artnetnodehandlepoll.cpp:51:6:void ArtNetNode::ProcessPollRelply(uint32_t, uint32_t&, uint32_t&)	32	static
-src/node/artnetnodehandlepoll.cpp:90:6:void ArtNetNode::SendPollRelply(uint32_t, uint32_t, artnet::ArtPollQueue*)	72	static
-src/node/artnetnodehandlepoll.cpp:153:6:void ArtNetNode::HandlePoll()	20	static
+../lib-pixeldmx/include/pixeldmxmulti.h:247:14:uint32_t PixelDmxMulti::GetUserData()	0	static
+../lib-pixeldmx/include/pixeldmxmulti.h:249:14:uint32_t PixelDmxMulti::GetRefreshRate()	0	static
+src/node/artnetnodehandlepoll.cpp:144:6:void ArtNetNode::ProcessPollReply(uint32_t, uint32_t&, uint32_t&)	12	static
+src/node/artnetnodehandlepoll.cpp:194:6:void ArtNetNode::SendPollReply(uint32_t, uint32_t, artnet::ArtPollQueue*)	56	static
+src/node/artnetnodehandlepoll.cpp:251:6:void ArtNetNode::HandlePoll()	12	static

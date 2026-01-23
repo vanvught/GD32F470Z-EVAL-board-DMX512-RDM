@@ -1,50 +1,44 @@
-../lib-lightset/include/lightset.h:201:19:virtual uint32_t LightSet::GetRefreshRate()	0	static
-../lib-lightset/include/lightset.h:203:15:virtual void LightSet::FullOn()	0	static
-../lib-lightset/include/lightset.h:206:15:virtual bool LightSet::SetDmxStartAddress(uint16_t)	0	static
-../lib-lightset/include/lightset.h:209:19:virtual uint16_t LightSet::GetDmxStartAddress()	0	static
-../lib-lightset/include/lightset.h:212:19:virtual uint16_t LightSet::GetDmxFootprint()	0	static
-../lib-lightset/include/lightset.h:215:15:virtual bool LightSet::GetSlotInfo(uint16_t, lightset::SlotInfo&)	0	static
-../lib-dmx/include/dmxsend.h:127:11:virtual uint32_t DmxSend::GetRefreshRate()	0	static
-../lib-dmx/include/dmxsend.h:42:7:DmxSend::~DmxSend()	0	static
-../lib-lightset/include/lightsetwith4.h:40:2:LightSetWith4<nMaxPorts>::~LightSetWith4() [with long unsigned int nMaxPorts = 64]	0	static
-../lib-lightset/include/lightsetwith4.h:134:7:void LightSetWith4<nMaxPorts>::Print() [with long unsigned int nMaxPorts = 64]	8	static
-../lib-lightset/include/lightsetwith4.h:58:7:void LightSetWith4<nMaxPorts>::Start(uint32_t) [with long unsigned int nMaxPorts = 64]	0	static
-../lib-lightset/include/lightsetwith4.h:67:7:void LightSetWith4<nMaxPorts>::Stop(uint32_t) [with long unsigned int nMaxPorts = 64]	0	static
-../lib-lightset/include/lightsetwith4.h:76:7:void LightSetWith4<nMaxPorts>::SetData(uint32_t, const uint8_t*, uint32_t, bool) [with long unsigned int nMaxPorts = 64]	16	static
-../lib-lightset/include/lightsetwith4.h:85:7:void LightSetWith4<nMaxPorts>::Sync(uint32_t) [with long unsigned int nMaxPorts = 64]	16	static
-../lib-lightset/include/lightsetwith4.h:94:7:void LightSetWith4<nMaxPorts>::Sync() [with long unsigned int nMaxPorts = 64]	8	static
-../lib-lightset/include/lightsetwith4.h:125:7:void LightSetWith4<nMaxPorts>::Blackout(bool) [with long unsigned int nMaxPorts = 64]	16	static
-../lib-lightset/include/lightsetwith4.h:143:7:bool LightSetWith4<nMaxPorts>::SetDmxStartAddress(uint16_t) [with long unsigned int nMaxPorts = 64]	0	static
-../lib-lightset/include/lightsetwith4.h:147:11:uint16_t LightSetWith4<nMaxPorts>::GetDmxStartAddress() [with long unsigned int nMaxPorts = 64]	0	static
-../lib-lightset/include/lightsetwith4.h:151:11:uint16_t LightSetWith4<nMaxPorts>::GetDmxFootprint() [with long unsigned int nMaxPorts = 64]	0	static
-../lib-lightset/include/lightsetwith4.h:155:7:bool LightSetWith4<nMaxPorts>::GetSlotInfo(uint16_t, lightset::SlotInfo&) [with long unsigned int nMaxPorts = 64]	0	static
-../lib-dmx/include/dmxsend.h:135:7:virtual void DmxSend::FullOn()	0	static
-../lib-dmx/include/dmxsend.h:131:7:virtual void DmxSend::Blackout(bool)	0	static
-../lib-dmx/include/dmxsend.h:98:7:virtual void DmxSend::Sync(uint32_t)	16	static
-../lib-dmx/include/dmxsend.h:42:7:virtual DmxSend::~DmxSend()	8	static
-../lib-lightset/include/lightsetwith4.h:40:2:LightSetWith4<nMaxPorts>::~LightSetWith4() [with long unsigned int nMaxPorts = 64]	8	static
-../lib-dmx/include/dmxsend.h:139:7:virtual void DmxSend::Print()	8	static
-../lib-dmx/include/dmxsend.h:86:7:virtual void DmxSend::SetData(uint32_t, const uint8_t*, uint32_t, bool)	24	static
-../lib-dmx/include/dmxsend.h:66:7:virtual void DmxSend::Stop(uint32_t)	24	static
-../lib-dmx/include/dmxsend.h:44:7:virtual void DmxSend::Start(uint32_t)	24	static
-../lib-dmx/include/dmxsend.h:103:7:virtual void DmxSend::Sync()	16	static
-../lib-display/include/i2c/display.h:206:7:void Display::SetCursorPos(uint32_t, uint32_t)	0	static
-../lib-display/include/i2c/display.h:103:7:void Display::PutChar(int)	0	static
-../lib-network/include/net/dhcp.h:104:13:void net::dhcp_run()	32	static
-../lib-display/include/i2c/display.h:138:6:)	56	static
-../lib-display/include/i2c/display.h:166:7:void Display::TextStatus(const char*)	32	static
-../lib-display/include/i2c/display.h:188:7:void Display::TextStatus(const char*, uint32_t)	16	static
-../lib-display/include/i2c/display.h:286:7:void Display::SetSleep(bool)	16	static
-../lib-display/include/displayhandler.h:37:6:void hardware::ledblink::display(uint32_t)	16	static
-../lib-ws28xx/include/pixelconfiguration.h:268:29:static PixelConfiguration& PixelConfiguration::Get()	8	static
-../lib-ws28xxdmx/include/pixeldmxconfiguration.h:53:2:PixelDmxConfiguration::PixelDmxConfiguration()	16	static
-../lib-ws28xx/include/pixeltestpattern.h:36:2:PixelTestPattern::PixelTestPattern(pixelpatterns::Pattern, uint32_t)	56	static
-../lib-rdm/include/rdmsubdevices.h:71:2:RDMSubDevices::~RDMSubDevices()	24	static
-../lib-rdm/include/llrp/llrpdevice.h:52:2:LLRPDevice::LLRPDevice()	16	static
-../lib-rdm/include/rdmdeviceresponder.h:69:10:RDMDeviceResponder::~RDMDeviceResponder()	16	static
-../lib-rdm/include/rdmnetdevice.h:54:2:RDMNetDevice::~RDMNetDevice()	8	static
-../lib-rdm/include/rdmnetdevice.h:54:2:virtual RDMNetDevice::~RDMNetDevice()	8	static
-../lib-rdm/include/rdmdeviceresponder.h:69:10:virtual RDMDeviceResponder::~RDMDeviceResponder()	8	static
-../lib-rdm/include/rdmnetdevice.h:64:7:void RDMNetDevice::Print()	80	static
-firmware/main.cpp:77:6:void Hardware::RebootHandler()	8	static
-firmware/main.cpp:82:5:int main()	2576	static
+../lib-pixel/include/pixel.h:46:17:uint32_t pixel::GetColour(uint8_t, uint8_t, uint8_t)	0	static
+../lib-rdm/include/llrp/llrpdevice.h:139:17:static void LLRPDevice::StaticCallbackFunction(const uint8_t*, uint32_t, uint32_t, uint16_t)	24	static
+../lib-pixel/include/pixel.h:66:23:constexpr uint8_t pixel::PixelColours::Blue() const	0	static
+../lib-pixel/include/pixel.h:64:23:constexpr uint8_t pixel::PixelColours::Green() const	0	static
+../lib-pixel/include/pixel.h:62:23:constexpr uint8_t pixel::PixelColours::Red() const	0	static
+../lib-pixeldmx/include/pixeldmxconfiguration.h:77:14:uint32_t PixelDmxConfiguration::GetGroups() const	0	static
+../lib-pixeldmx/include/pixeldmxconfiguration.h:75:14:uint32_t PixelDmxConfiguration::GetGroupingCount() const	0	static
+../lib-pixeldmx/include/pixeldmxconfiguration.h:72:14:uint32_t PixelDmxConfiguration::GetOutputPorts() const	0	static
+../lib-pixel/include/pixelconfiguration.h:109:14:uint32_t PixelConfiguration::GetLedsPerPixel() const	0	static
+../lib-pixel/include/pixelconfiguration.h:77:16:pixel::Map PixelConfiguration::GetMap() const	0	static
+../lib-pixel/include/pixelconfiguration.h:73:14:uint32_t PixelConfiguration::GetCount() const	0	static
+../lib-pixel/include/pixelconfiguration.h:65:17:pixel::Type PixelConfiguration::GetType() const	0	static
+../lib-dmx/include/dmxconfigudp.h:262:17:static void DmxConfigUdp::StaticCallbackFunction(const uint8_t*, uint32_t, uint32_t, uint16_t)	96	static
+../lib-dmx/include/dmxconfigudp.h:211:10:void DmxConfigUdp::HandleMab(const uint8_t*, uint32_t)	16	static
+../lib-dmx/include/dmxconfigudp.h:194:10:void DmxConfigUdp::HandleBreak(const uint8_t*, uint32_t)	16	static
+../lib-dmx/include/dmxconfigudp.h:228:10:void DmxConfigUdp::HandleRefresh(const uint8_t*, uint32_t)	16	static
+../lib-dmx/include/dmxconfigudp.h:243:10:void DmxConfigUdp::HandleSlots(const uint8_t*, uint32_t)	16	static
+../lib-configstore/include/configstore.h:529:17:static void ConfigStore::Timer(TimerHandle_t)	32	static
+../lib-pixeldmx/include/pixeldmxmulti.h:244:10:void PixelDmxMulti::Print()	24	static
+../lib-pixel/include/pixel.h:133:13:void pixel::SetPixelColour(uint32_t, uint32_t)	48	static
+../lib-gd32/include/gd32_gpio.h:205:13:void Gd32GpioFsel(uint32_t, uint32_t)	16	static
+../lib-gd32/include/gd32_gpio.h:213:13:void Gd32GpioClr(uint32_t)	16	static
+../lib-display/include/i2c/display.h:164:9:)	56	static
+../lib-display/include/i2c/display.h:196:10:void Display::TextStatus(const char*)	32	static
+../lib-pixel/include/pixelconfiguration.h:305:32:static PixelConfiguration& PixelConfiguration::Get()	8	static
+../lib-pixeldmx/include/pixeldmxconfiguration.h:170:35:static PixelDmxConfiguration& PixelDmxConfiguration::Get()	8	static
+../lib-pixeldmx/include/pixeldmxmulti.h:215:10:void PixelDmxMulti::Blackout(bool)	16	static
+../lib-pixeldmx/include/pixeldmxmulti.h:264:27:static PixelDmxMulti& PixelDmxMulti::Get()	8	static
+../lib-pixel/include/pixel.h:46:17:uint32_t pixel::GetColour(uint8_t, uint8_t, uint8_t)	0	static
+../lib-pixel/include/pixel.h:58:24:constexpr pixel::PixelColours::PixelColours(uint32_t)	0	static
+../lib-pixel/include/pixel.h:74:13:void pixel::SetPixelColour(uint32_t, uint32_t, uint32_t)	40	static
+../lib-pixel/include/pixel.h:133:13:void pixel::SetPixelColour(uint32_t, uint32_t)	152	static
+../lib-pixel/include/pixel.h:143:13:bool pixel::IsUpdating()	8	static
+../lib-pixel/include/pixel.h:150:13:void pixel::Update()	8	static
+../lib-pixel/include/pixeltestpattern.h:37:2:PixelTestPattern::PixelTestPattern(pixelpatterns::Pattern, uint32_t)	40	static
+../lib-configstore/include/configstore.h:61:5:ConfigStore::ConfigStore()	56	static
+../lib-rdm/include/rdmdevice.h:115:10:void RdmDevice::Init()	40	static
+../lib-rdm/include/rdmdevice.h:132:10:void RdmDevice::Print()	16	static
+../lib-remoteconfig/include/httpd/httpdhandlerequest.h:49:5:HttpDeamonHandleRequest::HttpDeamonHandleRequest()	8	static
+firmware/main.cpp:61:6:void hal::RebootHandler()	8	static
+../include/algorithm:51:10:const T& std::min(const T&, const T&) [with T = long unsigned int]	0	static
+../lib-pixeldmx/include/pixeldmxmulti.h:66:5:PixelDmxMulti::PixelDmxMulti()	40	static
+firmware/main.cpp:68:5:int main()	384	static
+firmware/main.cpp:155:1:cpp)	16	static
