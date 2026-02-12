@@ -1,2 +1,0 @@
-./../firmware-template-gd32//hardfault_handler.cpp:15:17:void HardFault_Handler()	0	static
-./../firmware-template-gd32//hardfault_handler.cpp:26:17:void HardfaultHandler(uint32_t*, uint32_t)	64	static
