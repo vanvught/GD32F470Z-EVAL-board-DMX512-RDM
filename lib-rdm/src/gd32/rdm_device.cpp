@@ -1,8 +1,8 @@
 /**
- * @file rdmdeviceparamsconst.h
+ * @file rdm_device.cpp
  *
  */
-/* Copyright (C) 2025-2026 by Arjan van Vught mailto:info@gd32-dmx.org
+/* Copyright (C) 2026 by Arjan van Vught mailto:info@gd32-dmx.org
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,19 +23,52 @@
  * THE SOFTWARE.
  */
 
-#ifndef JSON_RDMDEVICEPARAMSCONST_H_
-#define JSON_RDMDEVICEPARAMSCONST_H_
+#include <cstdint>
 
-#include "json/json_key.h"
+#include "gd32_board.h"
+#include "firmwareversion.h"
 
-namespace json
+namespace rdm::device
 {
-struct RdmDeviceParamsConst
+static constexpr char kRootLabel[] =
+#if defined(CONFIG_RDM_DEVICE_ROOT_LABEL)
+    CONFIG_RDM_DEVICE_ROOT_LABEL;
+#else
+    GD32_BOARD_NAME " RDM Device";
+#endif
+
+const char* RootLabel(uint8_t& length)
 {
-    static constexpr char kFileName[] = "rdmdevice.json";
+    length = sizeof(rdm::device::kRootLabel) - 1;
+    return kRootLabel;
+}
 
-    static constexpr json::SimpleKey kLabel{"label", 5, Fnv1a32("label", 5)};
-};
-} // namespace json
+uint16_t DeviceModel()
+{
+#if defined(GD32_BOARD_ID)
+    return GD32_BOARD_ID;
+#else
+    return 0;
+#endif
+}
 
-#endif // JSON_RDMDEVICEPARAMSCONST_H_
+uint32_t BootSoftwareVersionId()
+{
+#if defined(RELEASE_ID)
+    return RELEASE_ID;
+#else
+    return 0;
+#endif
+}
+
+uint32_t SoftwareVersionId()
+{
+    return _TIME_STAMP_;
+}
+
+const char* SoftwareVersionLabel(uint32_t& length)
+{
+    length = firmwareversion::length::kSoftwareVersion;
+    return FirmwareVersion::Get()->GetSoftwareVersion();
+}
+} // namespace rdm::device

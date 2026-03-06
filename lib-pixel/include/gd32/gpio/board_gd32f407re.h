@@ -1,8 +1,8 @@
 /**
- * @file dmxnode_utils.h
+ * @file board_gd32f407re.h
  *
  */
-/* Copyright (C) 2025 by Arjan van Vught mailto:info@gd32-dmx.org
+/* Copyright (C) 2022-2025 by Arjan van Vught mailto:info@gd32-dmx.org
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,25 +23,24 @@
  * THE SOFTWARE.
  */
 
-#ifndef DMXNODE_UTILS_H_
-#define DMXNODE_UTILS_H_
+#ifndef GPIO_BOARD_GD32F407RE_H_
+#define GPIO_BOARD_GD32F407RE_H_
 
-#include <cstdint>
+#include "gd32.h" // IWYU pragma: keep
 
-namespace json
-{
-template <class S> static void PortSet(uint32_t port_index, S s, uint16_t& n)
-{
-    uint16_t value = n; // Create a local copy
-    value &= static_cast<uint16_t>(~(0x3 << (port_index * 2)));
-    value |= static_cast<uint16_t>((static_cast<uint32_t>(s) & 0x3) << (port_index * 2));
-    n = value; // Write back to the original field
-}
+#define RCU_GPIOx             RCU_GPIOC
+#define GPIOx					        GPIOC
+#define GPIO_PINx             (GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 | GPIO_PIN_12 | GPIO_PIN_13)
+#define GPIO_PIN_OFFSET			  6U
 
-template <class S> static S PortGet(uint32_t port_index, uint16_t n)
-{
-    return static_cast<S>((n >> (port_index * 2)) & 0x3);
-}
-} // namespace json
+#define MASTER_TIMER_CLOCK		(APB2_CLOCK_FREQ * 2)
 
-#endif  // DMXNODE_UTILS_H_
+/**
+ * Implementation note: CLOCK is Timer 2 Channel 0 is GPIOA6
+ */
+
+#define DEBUG_CS_RCU_GPIOx		RCU_GPIOA
+#define DEBUG_CS_GPIOx        GPIOA
+#define DEBUG_CS_GPIO_PINx		GPIO_PIN_14
+
+#endif // GPIO_BOARD_GD32F407RE_H_
