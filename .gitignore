@@ -41,5 +41,5 @@ udp_send
 software_version_id.h
 *.su
 /common/scripts/gd32/venv
-*.h
-.DS_Store
+common/include/dmx/board_gd32f407re.h
+lib-remoteconfig/.DS_Store
