@@ -26,12 +26,11 @@
 #pragma GCC push_options
 #pragma GCC optimize("O2")
 #pragma GCC optimize("no-tree-loop-distribute-patterns")
-#pragma GCC optimize("-fprefetch-loop-arrays")
 
 #include <cstdint>
 
 #include "gd32/hal.h"
-#include "gd32/hal_watchdog.h"
+#include "watchdog.h"
 #include "network.h"
 #include "displayudf.h"
 #include "json/displayudfparams.h"
@@ -55,11 +54,8 @@
 #include "firmwareversion.h"
 #include "software_version.h"
 
-
-namespace hal
-{
-void RebootHandler()
-{
+namespace hal {
+void RebootHandler() {
     PixelDmxMulti::Get().Blackout();
     Dmx::Get()->Blackout();
     ArtNetNode::Get()->Stop();
@@ -99,13 +95,11 @@ int main() // NOLINT
 
     uint32_t dmx_universes = 0;
 
-    for (uint32_t port_index = dmxnode::kDmxportOffset; port_index < dmxnode::kMaxPorts; port_index++)
-    {
+    for (uint32_t port_index = dmxnode::kDmxportOffset; port_index < dmxnode::kMaxPorts; port_index++) {
         const auto kDmxPortIndex = port_index - dmxnode::kDmxportOffset;
 
-        if (dmxnode_node.GetPortDirection(port_index) == dmxnode::PortDirection::kOutput)
-        {
-            dmx.SetPortDirection(kDmxPortIndex, dmx::PortDirection::kOutput, false);
+        if (dmxnode_node.PortDirection(port_index) == dmxnode::Direction::kOutput) {
+            dmx.SetPortDirection(kDmxPortIndex, dmx::Direction::kOutput, false);
             dmx_universes++;
         }
     }
@@ -142,17 +136,16 @@ int main() // NOLINT
 
     RemoteConfig remote_config(remoteconfig::Output::PIXEL, dmxnode_node.GetActiveOutputPorts());
 
-    display.TextStatus(DmxNodeMsgConst::START, console::Colours::kConsoleYellow);
+    display.TextStatus(DmxNodeMsgConst::START, ansi::Colours::Colour::kYellow);
 
     dmxnode_node.Start();
 
-    display.TextStatus(DmxNodeMsgConst::STARTED, console::Colours::kConsoleGreen);
+    display.TextStatus(DmxNodeMsgConst::STARTED, ansi::Colours::Colour::kGreen);
 
-    hal::WatchdogInit();
+    watchdog::Init();
 
-    for (;;)
-    {
-        hal::WatchdogFeed();
+    for (;;) {
+        watchdog::Feed();
         network::Run();
         dmxnode_node.Run();
 #if defined(NODE_SHOWFILE)

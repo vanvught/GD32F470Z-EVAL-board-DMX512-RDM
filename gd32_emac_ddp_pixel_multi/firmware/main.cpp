@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  */
-/* Copyright (C) 2021-2025 by Arjan van Vught mailto:info@gd32-dmx.org
+/* Copyright (C) 2021-2026 by Arjan van Vught mailto:info@gd32-dmx.org
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,7 @@
 #include <cstdint>
 #include <cstdio>
 
-#include "gd32/hal_watchdog.h"
+#include "watchdog.h"
 #include "network.h"
 #include "apps/mdns.h"
 #include "displayudf.h"
@@ -51,10 +51,8 @@
 #include "common/utils/utils_flags.h"
 #include "configurationstore.h"
 
-namespace hal
-{
-void RebootHandler()
-{
+namespace hal {
+void RebootHandler() {
     PixelDmxMulti::Get().Blackout();
     DdpDisplay::Get()->Stop();
 }
@@ -91,7 +89,7 @@ int main() // NOLINT
     ddpdisplay.Print();
 
 #if defined(NODE_RDMNET_LLRP_ONLY)
-    RDMNetDevice llrp_only_device;
+    RdmNetDevice llrp_only_device;
     llrp_only_device.Print();
 #endif
 
@@ -110,17 +108,16 @@ int main() // NOLINT
 
     RemoteConfig remote_config(remoteconfig::Output::PIXEL, kActivePorts);
 
-    display.TextStatus("Starting DDP Display", console::Colours::kConsoleYellow);
+    display.TextStatus("Starting DDP Display", ansi::Colours::Colour::kYellow);
 
     ddpdisplay.Start();
 
-    display.TextStatus("DDP Display Started", console::Colours::kConsoleGreen);
+    display.TextStatus("DDP Display Started", ansi::Colours::Colour::kGreen);
 
-    hal::WatchdogInit();
+    watchdog::Init();
 
-    for (;;)
-    {
-        hal::WatchdogFeed();
+    for (;;) {
+        watchdog::Feed();
         network::Run();
         pixeltest_pattern.Run();
         hal::Run();

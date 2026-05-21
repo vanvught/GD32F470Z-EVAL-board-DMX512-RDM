@@ -27,7 +27,7 @@
 #pragma GCC optimize("no-tree-loop-distribute-patterns")
 
 #include "gd32/hal.h"
-#include "gd32/hal_watchdog.h"
+#include "watchdog.h"
 #include "network.h"
 #include "displayudf.h"
 #include "json/displayudfparams.h"
@@ -47,11 +47,8 @@
 #include "firmwareversion.h"
 #include "software_version.h"
 
-
-namespace hal
-{
-void RebootHandler()
-{
+namespace hal {
+void RebootHandler() {
     PixelDmxMulti::Get().Blackout();
     ArtNetNode::Get()->Stop();
 }
@@ -80,12 +77,9 @@ int main() // NOLINT
 
     PixelTestPattern pixeltest_pattern(kTestPattern, kPixelActivePorts);
 
-    if (PixelTestPattern::Get()->GetPattern() != pixelpatterns::Pattern::kNone)
-    {
+    if (PixelTestPattern::Get()->GetPattern() != pixelpatterns::Pattern::kNone) {
         dmxnode_node.SetOutput(nullptr);
-    }
-    else
-    {
+    } else {
         dmxnode_node.SetOutput(&pixeldmx_multi);
     }
 
@@ -113,17 +107,16 @@ int main() // NOLINT
 
     RemoteConfig remote_config(remoteconfig::Output::PIXEL, dmxnode_node.GetActiveOutputPorts());
 
-    display.TextStatus(DmxNodeMsgConst::START, console::Colours::kConsoleYellow);
+    display.TextStatus(DmxNodeMsgConst::START, ansi::Colours::Colour::kYellow);
 
     dmxnode_node.Start();
 
-    display.TextStatus(DmxNodeMsgConst::STARTED, console::Colours::kConsoleGreen);
+    display.TextStatus(DmxNodeMsgConst::STARTED, ansi::Colours::Colour::kGreen);
 
-    hal::WatchdogInit();
+    watchdog::Init();
 
-    for (;;)
-    {
-        hal::WatchdogFeed();
+    for (;;) {
+        watchdog::Feed();
         network::Run();
         dmxnode_node.Run();
 #if defined(NODE_SHOWFILE)
