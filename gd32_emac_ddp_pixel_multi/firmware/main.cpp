@@ -22,25 +22,23 @@
  * THE SOFTWARE.
  */
 
-#include "firmware/pixeldmx/show.h"
 #pragma GCC push_options
 #pragma GCC optimize("O2")
 #pragma GCC optimize("no-tree-loop-distribute-patterns")
 
-#include <cstdint>
-#include <cstdio>
 
+
+#include "gd32/hal.h"
 #include "watchdog.h"
 #include "network.h"
 #include "apps/mdns.h"
 #include "displayudf.h"
 #include "json/displayudfparams.h"
 #include "ddpdisplay.h"
-#include "pixeldmxconfiguration.h"
-#include "pixeltype.h"
 #include "pixeltestpattern.h"
 #include "json/pixeldmxparams.h"
 #include "pixeldmxmulti.h"
+#include "firmware/pixeldmx/show.h"
 #if defined(NODE_RDMNET_LLRP_ONLY)
 #include "rdmnetdevice.h"
 #endif
