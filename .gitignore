@@ -42,4 +42,7 @@ software_version_id.h
 *.su
 /common/scripts/gd32/venv
 common/include/dmx/board_gd32f407re.h
-lib-remoteconfig/.DS_Store
+
+# Apple
+.DS_Store
+._*

@@ -33,6 +33,10 @@ include ../common/make/Artnet.mk
 include ../common/make/gd32/mbedtls.mk
 include ../common/make/gd32/Validate.mk
 
+ifeq ($(findstring USE_USB_FS,$(DEFINES)),USE_USB_FS)
+	LIBS+=fatfs
+endif
+
 LIBS+=gd32 clib
 
 ifeq ($(findstring NODE_SHOWFILE,$(DEFINES)),NODE_SHOWFILE)
