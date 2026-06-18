@@ -46,3 +46,4 @@ common/include/dmx/board_gd32f407re.h
 # Apple
 .DS_Store
 ._*
+/lib-artnet/src/controller
