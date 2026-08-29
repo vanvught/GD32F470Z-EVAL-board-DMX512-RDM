@@ -28,11 +28,11 @@
 
 #if !defined(BOARD_GD32F470VG)
 # error This file should not be included
-#endif
+#endif // BOARD_GD32F470VG
 
 #if defined (MCU_GD32F470_MCU_H_)
 # error This file should be included later
-#endif
+#endif // defined (MCU_GD32F470_MCU_H_)
 
 #include <stdint.h>
 
@@ -122,7 +122,7 @@ inline constexpr uint32_t kTcnet = 0;
 static constexpr uint32_t kPortARx = 0;
 static constexpr uint32_t kPortATx = 0;
 } // namespace panelled
-#endif
+#endif // __cplusplus
 
 /**
  * SPI flash
@@ -156,8 +156,8 @@ static constexpr uint32_t kPortATx = 0;
 #define GD32_MCU_NAME   "GD32F470VG"
 #if !defined(GD32_BOARD_NAME)
 #define GD32_BOARD_NAME "GD32F470VG"
-#endif
+#endif // GD32_BOARD_NAME
 
 #include "mcu/gd32f470_mcu.h"
 
-#endif /* BOARD_GD32F470VG_H_ */
+#endif // BOARD_GD32F470VG_H_
