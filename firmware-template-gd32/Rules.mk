@@ -23,7 +23,8 @@ FIRMWARE_DIR=./../firmware-template-gd32/
 PROJECT=$(notdir $(patsubst %/,%,$(CURDIR)))
 $(info $$PROJECT [${PROJECT}])
 
-DEFINES:=$(addprefix -D,$(DEFINES))
+DEFINES:=$(addprefix -D,$(DEFINES)) 
+DEFINES+=-DPHY_TYPE=$(ENET_PHY)
 
 include ../common/make/gd32/Board.mk
 include ../common/make/gd32/Mcu.mk
@@ -62,7 +63,7 @@ LIBDEP=$(addprefix ../lib-,$(LIBS))
 DEFINES+=-DDMA_MEMCPY32_DISABLE_IRQ	
 DEFINES+=-DCONFIG_CLIB_USE_UART0
 
-COPS=-DGD32 -D$(FAMILY_UCA) -D$(LINE_UC) -D$(MCU) -D$(BOARD) -DPHY_TYPE=$(ENET_PHY)
+COPS=-DGD32 -D$(FAMILY_UCA) -D$(LINE_UC) -D$(MCU) -D$(BOARD)
 COPS+=$(strip $(DEFINES) $(MAKE_FLAGS) $(INCLUDES) $(LIBINCDIRS))
 COPS+=$(strip $(ARMOPS) $(CMSISOPS))
 COPS+=-Os -nostartfiles -ffreestanding -nostdlib
