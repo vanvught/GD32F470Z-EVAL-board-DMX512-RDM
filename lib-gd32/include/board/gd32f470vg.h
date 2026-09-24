@@ -40,29 +40,33 @@
  * LEDs
  */
 
-#define LED1_GPIO_PINx		GPIO_PIN_7
-#define LED1_GPIOx			GPIOC
-#define LED1_RCU_GPIOx		RCU_GPIOC
+#define LED1_GPIO_PINx					GPIO_PIN_0
+#define LED1_GPIOx						GPIOC
+#define LED1_RCU_GPIOx					RCU_GPIOC
 
-#define LED2_GPIO_PINx		GPIO_PIN_8
-#define LED2_GPIOx			GPIOC
-#define LED2_RCU_GPIOx		RCU_GPIOC
+#define LED2_GPIO_PINx					GPIO_PIN_2
+#define LED2_GPIOx						GPIOC
+#define LED2_RCU_GPIOx					RCU_GPIOC
 
-#define LED3_GPIO_PINx		GPIO_PIN_9
-#define LED3_GPIOx			GPIOC
-#define LED3_RCU_GPIOx		RCU_GPIOC
+#define LED3_GPIO_PINx					GPIO_PIN_3
+#define LED3_GPIOx						GPIOC
+#define LED3_RCU_GPIOx					RCU_GPIOC
 
-#define LED_BLINK_PIN       LED1_GPIO_PINx
-#define LED_BLINK_GPIO_PORT LED1_GPIOx
-#define LED_BLINK_GPIO_CLK	LED1_RCU_GPIOx
+#define LED_BLINK_PIN 					LED1_GPIO_PINx
+#define LED_BLINK_GPIO_PORT				LED1_GPIOx
+#define LED_BLINK_GPIO_CLK				LED1_RCU_GPIOx
 
 /**
- * KEY
+ * KEYs
  */
 
-#define KEY1_PINx						GPIO_PIN_13
-#define KEY1_GPIOx						GPIOC
-#define KEY1_RCU_GPIOx					RCU_GPIOC
+#define KEY1_PINx						GPIO_PIN_7
+#define KEY1_GPIOx						GPIOD
+#define KEY1_RCU_GPIOx					RCU_GPIOD
+
+#define KEY2_PINx						GPIO_PIN_6
+#define KEY2_GPIOx						GPIOD
+#define KEY2_RCU_GPIOx					RCU_GPIOD
 
 #define KEY_BOOTLOADER_TFTP_GPIO_PINx	KEY1_PINx
 #define KEY_BOOTLOADER_TFTP_GPIOx		KEY1_GPIOx
@@ -73,64 +77,49 @@
  */
 
 #define I2C0_REMAP
-#define I2C_REMAP			GPIO_I2C0_REMAP
-#define I2C_PERIPH			I2C0_PERIPH
-#define I2C_RCU_I2Cx		I2C0_RCU_I2C0
-#define I2C_GPIO_AFx		I2C0_GPIO_AFx
-#define I2C_SCL_RCU_GPIOx	I2C0_SCL_RCU_GPIOx
-#define I2C_SCL_GPIOx		I2C0_SCL_GPIOx
-#define I2C_SCL_GPIO_PINx	I2C0_SCL_GPIO_PINx
-#define I2C_SDA_RCU_GPIOx	I2C0_SDA_RCU_GPIOx
-#define I2C_SDA_GPIOx		I2C0_SDA_GPIOx
-#define I2C_SDA_GPIO_PINx	I2C0_SDA_GPIO_PINx
+#define I2C_REMAP						GPIO_I2C0_REMAP
+#define I2C_PERIPH						I2C0_PERIPH
+#define I2C_RCU_I2Cx					I2C0_RCU_I2C0
+#define I2C_GPIO_AFx					I2C0_GPIO_AFx
+#define I2C_SCL_RCU_GPIOx				I2C0_SCL_RCU_GPIOx
+#define I2C_SCL_GPIOx					I2C0_SCL_GPIOx
+#define I2C_SCL_GPIO_PINx				I2C0_SCL_GPIO_PINx
+#define I2C_SDA_RCU_GPIOx				I2C0_SDA_RCU_GPIOx
+#define I2C_SDA_GPIOx					I2C0_SDA_GPIOx
+#define I2C_SDA_GPIO_PINx				I2C0_SDA_GPIO_PINx
 
 /**
  * SPI
  */
 
-#define SPI_PERIPH			SPI2_PERIPH
-#define SPI_RCU_SPIx		SPI2_RCU_SPI2
-#define SPI_RCU_GPIOx		SPI2_RCU_GPIOx
-#define SPI_GPIO_AFx		SPI2_GPIO_AFx
-#define SPI_GPIOx			SPI2_GPIOx
-#define SPI_SCK_GPIO_PINx	SPI2_SCK_GPIO_PINx
-#define SPI_MISO_GPIO_PINx	SPI2_MISO_GPIO_PINx
-#define SPI_MOSI_GPIO_PINx	SPI2_MOSI_GPIO_PINx
-#define SPI_NSS_GPIOx		SPI2_NSS_GPIOx
-#define SPI_NSS_RCU_GPIOx	SPI2_NSS_RCU_GPIOx
-#define SPI_NSS_GPIO_PINx	SPI2_NSS_GPIO_PINx
-#define SPI_DMAx			SPI2_DMAx
-#define SPI_DMA_CHx			SPI2_TX_DMA_CHx
-#define SPI_DMA_SUBPERIx	SPI2_TX_DMA_SUBPERIx
+#define SPI_PERIPH						SPI2_PERIPH
+#define SPI_RCU_SPIx					SPI2_RCU_SPI2
+#define SPI_RCU_GPIOx					SPI2_RCU_GPIOx
+#define SPI_GPIO_AFx					SPI2_GPIO_AFx
+#define SPI_GPIOx						SPI2_GPIOx
+#define SPI_SCK_GPIO_PINx				SPI2_SCK_GPIO_PINx
+#define SPI_MISO_GPIO_PINx				SPI2_MISO_GPIO_PINx
+#define SPI_MOSI_GPIO_PINx				SPI2_MOSI_GPIO_PINx
+#define SPI_NSS_GPIOx					SPI2_NSS_GPIOx
+#define SPI_NSS_RCU_GPIOx				SPI2_NSS_RCU_GPIOx
+#define SPI_NSS_GPIO_PINx				SPI2_NSS_GPIO_PINx
+#define SPI_DMAx						SPI2_DMAx
+#define SPI_DMA_CHx						SPI2_TX_DMA_CHx
+#define SPI_DMA_SUBPERIx				SPI2_TX_DMA_SUBPERIx
 
-// Panel LEDs
-#ifdef __cplusplus
-#include <cstdint>
-namespace panelled {
-inline constexpr uint32_t kActivity = 0;
-inline constexpr uint32_t kArtnet = 0;
-inline constexpr uint32_t kDdp = 0;
-inline constexpr uint32_t kSacn = 0;
-inline constexpr uint32_t kLtcIn = 0;
-inline constexpr uint32_t kLtcOut = 0;
-inline constexpr uint32_t kMidiIn = 0;
-inline constexpr uint32_t kMidiOut = 0;
-inline constexpr uint32_t kOscIn = 0;
-inline constexpr uint32_t kOscOut = 0;
-inline constexpr uint32_t kTcnet = 0;
-// DMX
-static constexpr uint32_t kPortARx = 0;
-static constexpr uint32_t kPortATx = 0;
-} // namespace panelled
-#endif // __cplusplus
+/**
+ * U(S)ART
+ */
+
+#define USART0_REMAP
 
 /**
  * SPI flash
  */
 
-#define SPI_FLASH_CS_GPIOx			GPIOD
-#define SPI_FLASH_CS_RCU_GPIOx		RCU_GPIOD
-#define SPI_FLASH_CS_GPIO_PINx		GPIO_PIN_0
+#define SPI_FLASH_CS_GPIOx				GPIOD
+#define SPI_FLASH_CS_RCU_GPIOx			RCU_GPIOD
+#define SPI_FLASH_CS_GPIO_PINx			GPIO_PIN_5
 
 /**
  * EXT PHY
@@ -159,5 +148,26 @@ static constexpr uint32_t kPortATx = 0;
 #endif // GD32_BOARD_NAME
 
 #include "mcu/gd32f470_mcu.h"
+
+// Panel LEDs
+#ifdef __cplusplus
+#include <cstdint>
+namespace panelled {
+inline constexpr uint32_t kActivity = 0;
+inline constexpr uint32_t kArtnet = 0;
+inline constexpr uint32_t kDdp = 0;
+inline constexpr uint32_t kSacn = 0;
+inline constexpr uint32_t kLtcIn = 0;
+inline constexpr uint32_t kLtcOut = 0;
+inline constexpr uint32_t kMidiIn = 0;
+inline constexpr uint32_t kMidiOut = 0;
+inline constexpr uint32_t kOscIn = 0;
+inline constexpr uint32_t kOscOut = 0;
+inline constexpr uint32_t kTcnet = 0;
+// DMX
+static constexpr uint32_t kPortARx = 0;
+static constexpr uint32_t kPortATx = 0;
+} // namespace panelled
+#endif // __cplusplus
 
 #endif // BOARD_GD32F470VG_H_
