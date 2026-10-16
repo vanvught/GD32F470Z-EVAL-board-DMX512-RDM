@@ -26,7 +26,7 @@
 #ifndef MCU_GD32F470_MCU_H_
 #define MCU_GD32F470_MCU_H_
 
-#if !defined(GD32F470)
+#ifndef GD32F470
 # error This file should not be included
 #endif // GD32F470
 

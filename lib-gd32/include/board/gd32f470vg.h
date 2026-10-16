@@ -26,13 +26,13 @@
 #ifndef BOARD_GD32F470VG_H_
 #define BOARD_GD32F470VG_H_
 
-#if !defined(BOARD_GD32F470VG)
+#ifndef BOARD_GD32F470VG
 # error This file should not be included
 #endif // BOARD_GD32F470VG
 
-#if defined (MCU_GD32F470_MCU_H_)
+#ifdef MCU_GD32F470_MCU_H_
 # error This file should be included later
-#endif // defined (MCU_GD32F470_MCU_H_)
+#endif // MCU_GD32F470_MCU_H_
 
 #include <stdint.h>
 
@@ -143,7 +143,7 @@
  */
 
 #define GD32_MCU_NAME   "GD32F470VG"
-#if !defined(GD32_BOARD_NAME)
+#ifndef GD32_BOARD_NAME
 #define GD32_BOARD_NAME "GD32F470VG"
 #endif // GD32_BOARD_NAME
 
